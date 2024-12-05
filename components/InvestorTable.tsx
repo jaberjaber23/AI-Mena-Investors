@@ -74,7 +74,7 @@ export default function InvestorTable({ angels, search }) {
                     <div className="flex space-x-2 items-center mt-1">
                       <a
                         className="text-blue-500"
-                        href={person.email}
+                        href={person.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -113,11 +113,11 @@ export default function InvestorTable({ angels, search }) {
               <td className="col-span-3 row-start-2 whitespace-nowrap px-0 md:px-2 md:py-3 text-sm text-gray-500 justify-self-end">
                 <span
                   className={classNames(
-                    person.checksize_label === 'Small' // Modify this based on your check size labels
+                    person.checkSize === 'Small' // Modify this based on your check size labels
                       ? 'bg-green-100 text-green-800'
-                      : person.checksize_label === 'Medium'
+                      : person.checkSize === 'Medium'
                       ? 'bg-blue-100 text-blue-800'
-                      : person.checksize_label === 'Large'
+                      : person.checkSize === 'Large'
                       ? 'bg-red-100 text-red-800'
                       : 'bg-orange-100 text-orange-800',
                     'inline-flex rounded-full px-[9px] py-[2px] text-xs font-semibold leading-5'

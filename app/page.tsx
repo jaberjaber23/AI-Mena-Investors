@@ -12,14 +12,16 @@ const getAllAngels = cache(async () => {
     createdAt: doc.data().createdAt || new Date(),
     updatedAt: doc.data().updatedAt || new Date(),
     checksize_label: doc.data().checksize_label || '',
-    checksize_id: doc.data().checksize_id || '',
+    checkSize: doc.data().checkSize || 'Small',
     company: doc.data().company || '',
     hidden: doc.data().hidden || false,
     twitterPicture: doc.data().twitterPicture || '',
     details: doc.data().details || '',
     site: doc.data().site || '',
     twitterVerified: doc.data().twitterVerified || false,
-    email: doc.data().email || ''
+    email: doc.data().email || '',
+    rank: doc.data().rank || 3,
+    linkedin: doc.data().linkedin || ''
   }));
   return data;
 });
