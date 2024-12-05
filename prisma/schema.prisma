@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL") // uses connection pooling
+}
+
+model Investor {
+  id              Int        @id @default(autoincrement())
+  name            String
+  email           String?
+  company         String?
+  title           String?
+  checkSize       String?
+  details         String?
+  twitterPicture  String?
+  site            String?
+  twitterVerified Boolean?   @default(false)
+  hidden          Boolean?   @default(false)
+  rank            Int?       @default(0)
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  checksize       CheckSize? @relation(fields: [checksize_id], references: [id])
+  checksize_id    Int?
+}
+
+model CheckSize {
+  id     Int        @unique
+  name   String     @unique
+  angels Investor[]
+}
