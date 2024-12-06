@@ -5,8 +5,7 @@ import Header from '../components/Header';
 
 let title = 'MENA AI Angels';
 let description = 'Empowering AI Startups Across MENA';
-let url = 'https://www.menaaiangels.com';  // Update this to your actual website URL
-let ogimage = 'https://www.menaaiangels.com/og-image.png'; // Ensure the image URL is correct
+let url = 'https://angels.jaber.blog/';  // Update this to your actual website URL
 let sitename = 'MENA AI Angels';
 
 
@@ -18,7 +17,6 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
   },
   openGraph: {
-    images: [ogimage],
     title,
     description,
     url: url,
@@ -28,9 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    images: [ogimage],
     title,
-    description,
+    description
   },
 };
 
