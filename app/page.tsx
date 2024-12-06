@@ -34,7 +34,8 @@ function useFirestoreCollection() {
               : new Date(),
             checksize: data.checksize || null,
             checksize_id: data.checksize_id || null,
-            checksize_label: data.checksize_label || ''
+            checksize_label: data.checksize_label || '',
+            linkedin: doc.data().linkedin || ''
           };
         });
 
@@ -63,7 +64,8 @@ function useFirestoreCollection() {
                 : new Date(),
               checksize: data.checksize || null,
               checksize_id: data.checksize_id || null,
-              checksize_label: data.checksize_label || ''
+              checksize_label: data.checksize_label || '',
+              linkedin: doc.data().linkedin || ''
             };
           });
 
